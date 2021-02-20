@@ -11,7 +11,7 @@ export const App = () => {
       <TopMenu />
       <Router>
         <Welcome path="/" />
-        <LogIn path="/autentifica-te" />
+        <LogIn path="/auth" />
       </Router>
     </div>
   );
