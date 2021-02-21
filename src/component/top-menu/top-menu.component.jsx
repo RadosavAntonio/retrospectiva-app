@@ -1,11 +1,13 @@
-import { Link } from "@reach/router";
+
 import React from "react";
+import * as MS from "./top-menu.style"
 
 export const TopMenu = () => {
   return (
-    <nav>
-      <Link to="/">Acasa</Link>
-      <Link to="/auth">Intra pls</Link>
-    </nav>
+    <MS.Nav>
+      <MS.Linkulet to="/">Acasa</MS.Linkulet>
+      <MS.Linkulet to="/auth">Logheazate</MS.Linkulet>
+      <MS.Linkulet to="/dash">Deshboard</MS.Linkulet>
+    </MS.Nav>
   );
 };

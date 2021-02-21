@@ -25,16 +25,3 @@ export const db = firebase.firestore()
 export const ts = firebase.firestore.FieldValue.serverTimestamp();
 export const auth = firebase.auth();
 export const GitHubProvider = new firebase.auth.GithubAuthProvider()
-// export const emailAndPassProvider = new firebase.auth.Auth.signInWithEmailAndPassword
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
