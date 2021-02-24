@@ -7,6 +7,7 @@ export const TopMenu = () => {
       <span />
       <TMS.TheLink to='/'>Home</TMS.TheLink>
       <TMS.TheLink to='/login'>Login</TMS.TheLink>
+      <TMS.TheLink to='/dash'>Dashboard</TMS.TheLink>
     </TMS.Nav>
   )
 }
