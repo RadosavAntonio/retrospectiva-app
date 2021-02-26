@@ -1,5 +1,5 @@
 import style from 'styled-components'
 
 export const Layout = style.div`
-  color: green;
+  color: red;
 `
