@@ -2,6 +2,7 @@ import React from 'react'
 import * as HS from './home.style'
 
 export const Home = () => {
+    
   return (
     <HS.MainStyle>
       <HS.ColorG>Home Page</HS.ColorG>

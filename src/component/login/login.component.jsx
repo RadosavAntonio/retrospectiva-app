@@ -1,16 +1,46 @@
 import { Button, TextField } from "@material-ui/core";
-import React, { useState } from "react";
+import React from "react";
 import * as LS from "./login.style";
+import { auth, GitHubProvider } from '../../config/firebase'
 
-const user = window.localStorage.getItem('retrospective-app') 
-  ? JSON.parse(window.localStorage.getItem('retrospective-app'))
-  : ''
+// const user = window.localStorage.getItem('retrospective-app') 
+//   ? JSON.parse(window.localStorage.getItem('retrospective-app'))
+//   : ''
+
+const user = ''
 console.log(';########################')
 console.log(user)
 
 export const Login = () => {
 
-  
+  const iesiAcasa = () => {
+    window.localStorage.setItem('retrospective-app', '')
+  }
+
+  const bagaTare = () => {
+    console.log('cacaulullucicretcremali')
+    auth
+      .signInWithPopup(GitHubProvider)
+      .then(({ user }) => {
+        console.log(user)
+        const { email, uid, displayName, photoURL } = user
+        console.log(email)
+        console.log(uid)
+        console.log(displayName)
+        console.log(photoURL)
+
+      window.localStorage.setItem('retrospective-app', JSON.stringify({
+        email,
+        uid,
+        displayName,
+        photoURL
+      }))
+    })
+    .catch(() => {
+      console.log('Ha ha ah')
+    })
+
+  }
 
 
   return (
@@ -27,7 +57,7 @@ export const Login = () => {
           variant="outlined"
           color="secondary"
           type="submit"
-          // onClick={iesiAcasa}
+          onClick={iesiAcasa}
         >
           Logout
         </Button>
@@ -37,7 +67,7 @@ export const Login = () => {
           variant="contained"
           color="primary"
           type="submit"
-          // onClick={bagaTare}
+          onClick={bagaTare}
         >
           Login
         </Button>

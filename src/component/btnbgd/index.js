@@ -1,0 +1,1 @@
+export { BtnBgd } from "./btnbgd.component";
